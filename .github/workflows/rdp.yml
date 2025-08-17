@@ -1,0 +1,12 @@
+name: Windows RDP
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Test Windows
+        run: |
+          echo "Windows runner sudah jalan!"
+          systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
